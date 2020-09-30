@@ -9,26 +9,27 @@ Generator of mq4 indicator with historical news from forexfactory.con
 
 To Build the news indicator it must be done in 2 steps: download news and generate indicator.
 
-* Extract this repository to a folder like nnfx-news
-* In command line, donwload news by execute the command: `php download-news.php`
-* Generate mq4 indicator, execute: `php generate_indicator.php NNFX_News_offline.mq4`
-
-After 
+* Extract files of this repository to a folder like nnfx-news
+* In command line, go to that folder and donwload news by execute the command:
+    - `cd nnfx-news` 
+    - `php download-news.php`
+* Generate mq4 indicator, execute: 
+    - `php generate_indicator.php NNFX_News_offline.mq4`
 
 > Note: If the php command is not recognized in line command, you can especify the full path of php.exe, like `C:\xampp\php\php.exe download-news.php`
 
 ## Options for generator:
 
-The `generate_indicator.php` script only generate specific events for NNFX use referred to by the VP.
+The `generate_indicator.php` script only generate with events referred to by the VP for NNFX.
 
-Instead of this filter events, it is possible to generate indicator with all high-impact events.
+Instead of filter events for NNFX, it is possible to generate the indicator with all high-impact events.
 To do this, you can run command like:
 
 `php generate_indicator.php HighImpact_News_offline.mq4 --nnfx-events=0 --high-impact=1`
 
 ## NNFX events:
 
-In ´generate_indicator.php´ there are the list of expressions to filter events for nnfx use:
+For reference, follow the list of expressions to filter nnfx events in ´generate_indicator.php´ script:
 
 ```php
 $filterEvents = [
