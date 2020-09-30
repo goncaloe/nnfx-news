@@ -1,5 +1,5 @@
 # nnfx-news
-Generator of mq4 indicator with historical news from forexfactory.con
+Generator of mq4 indicator with historical news from forexfactory.com
 
 ## Requirements:
 
